@@ -6,6 +6,9 @@ const Userschema = Schema({
     username : {type : String},
     Email : {type : String,required : true},
     Password : {type : String,required : true},
+    isVerified: { type: Boolean, default: false },
+    verificationToken: { type: String },
+    verificationExpires: { type: Date }
 })
 
 const User = model('user',Userschema)

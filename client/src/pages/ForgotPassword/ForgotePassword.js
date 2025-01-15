@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import { useLocation } from 'react-router-dom'
-import { Button, Card, Input, input } from '@nextui-org/react'
+import { Button, Card, Input } from '@nextui-org/react';
 
 export const ForgotePassword = () => {
   return (

@@ -3,15 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "axios": "^1.7.9",
-    "cra-template": "1.2.0",
-    "js-cookie": "^3.0.5",
-    "jwt-decode": "^4.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1"
-=======
     "@auth0/auth0-react": "^2.2.4",
     "@emotion/react": "^11.14.0",
     "@nextui-org/button": "^2.2.7",
@@ -29,7 +20,6 @@
     "react-router-dom": "^7.0.2",
     "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4"
->>>>>>> 47677da (Initial commit)
   },
   "scripts": {
     "start": "react-scripts start",
@@ -56,12 +46,8 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@chakra-ui/cli": "^3.2.3"
-=======
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
->>>>>>> 47677da (Initial commit)
   }
 }

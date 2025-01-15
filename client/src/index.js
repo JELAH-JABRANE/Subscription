@@ -1,27 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-<<<<<<< HEAD
-=======
 import { NextUIProvider } from "@nextui-org/react";
 
->>>>>>> 47677da (Initial commit)
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-<<<<<<< HEAD
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-=======
+
 
 root.render(
   <NextUIProvider>
     <App />
   </NextUIProvider>
->>>>>>> 47677da (Initial commit)
 );
 
 // If you want to start measuring performance in your app, pass a function
