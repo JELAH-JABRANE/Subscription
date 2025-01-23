@@ -18,7 +18,9 @@ function App() {
         <Route path='/forgotpassword' element={<ForgotePassword />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/jobs' element={<JobFinder />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/Admin' element={<AdminDashboard />} />
+
       </Routes>
       </BrowserRouter>
      
