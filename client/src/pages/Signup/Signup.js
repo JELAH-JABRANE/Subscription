@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import Googlelogo from '../../images/search.png';
 import MicrosoftLogo from '../../images/microsoft.png';
-import { Alert, Button, Input } from '@nextui-org/react';
+import { Alert, Button, Input } from "@heroui/react";
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 

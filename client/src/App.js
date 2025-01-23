@@ -7,6 +7,7 @@ import { ForgotePassword } from './pages/ForgotPassword/ForgotePassword';
 import { Signup } from './pages/Signup/Signup';
 import { Dashboard } from './pages/dashboard/Dashboard';
 import { JobFinder } from './pages/JobFinder/JobFinder';
+import { AdminDashboard } from './pages/Admin/AdminDashboard';
  
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path='/forgotpassword' element={<ForgotePassword />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/Jobs' element={<JobFinder />} />
+        <Route path='/jobs' element={<JobFinder />} />
       </Routes>
       </BrowserRouter>
      

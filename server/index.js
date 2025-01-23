@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 import signupRoutes from './routes/user.js'
 import signinRoutes from './routes/signin.js'
 import cors from "cors"; 
+import googleLoginRoute from './routes/googleLoginRoute.js';  // New import
+
 
 dotenv.config();
 
@@ -24,7 +26,9 @@ mongoose.connect(process.env.MONGODB_URI, {})
 // Your routes
 app.use('/api/connexion', signupRoutes)  // Keep the same base path
 app.use('/api/connexion', signinRoutes)  // Use the same base path
+app.use('/api/', googleLoginRoute);  // Add this line for Google login
 
-app.listen(5555, () => {
-    console.log('server running on http://localhost:5555')  // Match the actual port
+
+app.listen(5000, () => {
+    console.log('server running on http://localhost:5000')  // Match the actual port
 })

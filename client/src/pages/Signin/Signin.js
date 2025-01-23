@@ -1,4 +1,4 @@
-import { Card, CardBody, Input, Button, Link, Checkbox } from "@nextui-org/react";
+import { Card, CardBody, Input, Button, Link, Checkbox } from "@heroui/react";
 import Header from "../../components/Header/Header";
 import Googlelogo from "../../images/search.png";
 import MicrosoftLogo from "../../images/microsoft.png";
