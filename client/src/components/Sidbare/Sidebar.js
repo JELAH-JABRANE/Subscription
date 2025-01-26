@@ -4,6 +4,7 @@ import {
     Button,
     Divider
 } from '@heroui/react';
+import chuLogo from '../../images/logo-site (1).jpg'
 
 import { FaExpeditedssl, FaHome, FaUser, FaUserTag } from 'react-icons/fa';
 
@@ -21,17 +22,28 @@ const Sidebar = () => {
             label: 'Utilisateurs',
             icon: <FaUser />
         },
+        
         {
-            key: 'settings',
-            label: 'Paramètres',
+            key: 'Candidatures',
+            label: 'Candidatures',
+            icon: <FaUserTag />
+        },
+        {
+            key: 'concours',
+            label: 'concours',
+            icon: <FaUserTag />
+        },
+        {
+            key: 'Archives',
+            label: 'Archives',
             icon: <FaUserTag />
         }
     ];
 
     return (
         <Card className="h-screen w-64 p-4">
-            <div className="mb-6">
-                <h2 className="text-xl font-bold">Admin Panel</h2>
+            <div className="mb-6 flex justify-center">
+                <img width={120} height={120} src={chuLogo} alt="" />
             </div>
 
             <Divider />

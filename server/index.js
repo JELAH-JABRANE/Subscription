@@ -2,12 +2,10 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import signupRoutes from './routes/user.js'
-import signinRoutes from './routes/signin.js'
+import userRegistration from './routes/user.js'
 import cors from "cors"; 
-import googleLoginRoute from './routes/googleLoginRoute.js';  // New import
 
-
+import specialiteRouter from './routes/Specialite.js'
 dotenv.config();
 
 const app = express()
@@ -24,9 +22,8 @@ mongoose.connect(process.env.MONGODB_URI, {})
     .catch(err => console.error("MongoDB connection error:", err));
 
 // Your routes
-app.use('/api/connexion', signupRoutes)  // Keep the same base path
-app.use('/api/connexion', signinRoutes)  // Use the same base path
-app.use('/api/', googleLoginRoute);  // Add this line for Google login
+app.use('/api/connexion', userRegistration)  // Keep the same base path
+app.use('/api/specialite', specialiteRouter)  // Keep the same base path
 
 
 app.listen(5000, () => {

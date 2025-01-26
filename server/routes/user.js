@@ -1,11 +1,9 @@
-import { signup } from "../controllers/signup.js";
-import { verifyEmail } from "../controllers/verify.js";
+import { user } from "../controllers/user.js";
 import {Router} from 'express'
 
 const router = Router();
 
-router.post('/',signup)
-router.get('/verify/:token', verifyEmail);
+router.post('/',user)
 
 
 

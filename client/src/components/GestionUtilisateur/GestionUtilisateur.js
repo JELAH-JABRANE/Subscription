@@ -1,8 +1,4 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
-import Sidebar from '../../components/Sidbare/Sidebar'
-import { DashHeader } from '../../components/dashHeader/DashHeader'
-
 import {
     Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Table,
     TableHeader,
@@ -19,13 +15,9 @@ import {
     Chip,
     User,
     Pagination,
-    Breadcrumbs, BreadcrumbItem
 } from "@heroui/react";
-import { GestionUtilisateur } from '../../components/GestionUtilisateur/GestionUtilisateur';
 
-
-
-export const AdminDashboard = () => {
+export const GestionUtilisateur = () => {
 
     const columns = [
         { name: "ID", uid: "id", sortable: true },
@@ -613,36 +605,53 @@ export const AdminDashboard = () => {
         onSearchChange,
         hasSearchFilter,
     ]);
-
     return (
-        <div className="flex">
-            <Sidebar />
-            <main className="ml-24 flex-1">
-                <DashHeader />
+        <div>
+            <Card className="max-w-[1400px] ">
+                <CardHeader className="flex gap-3">
 
+              
+                </CardHeader>
+                <CardBody>
+                    <Table
+                        isHeaderSticky
+                        aria-label="Example table with custom cells, pagination and sorting"
+                        bottomContent={bottomContent}
+                        bottomContentPlacement="outside"
+                        classNames={{
+                            wrapper: "max-h-[382px] P-8",
+                        }}
+                        selectedKeys={selectedKeys}
+                        selectionMode="multiple"
+                        sortDescriptor={sortDescriptor}
+                        topContent={topContent}
+                        topContentPlacement="outside"
+                        onSelectionChange={setSelectedKeys}
+                        onSortChange={setSortDescriptor}
+                    >
+                        <TableHeader columns={headerColumns}>
+                            {(column) => (
+                                <TableColumn
+                                    key={column.uid}
+                                    align={column.uid === "actions" ? "center" : "start"}
+                                    allowsSorting={column.sortable}
+                                >
+                                    {column.name}
+                                </TableColumn>
+                            )}
+                        </TableHeader>
+                        <TableBody emptyContent={"No users found"} items={sortedItems}>
+                            {(item) => (
+                                <TableRow key={item.id}>
+                                    {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}
+                                </TableRow>
+                            )}
+                        </TableBody>
+                    </Table>
+                </CardBody>
+                <Divider />
 
-                <div className='container pt-10 w-full'>
-                    <div className='page-header pb-8'>
-                        <p className='font-semibold text-md text-start'>Gestion des utilisateur</p>
-                        <div className='pt-4'>
-
-                        <Breadcrumbs
-                            itemClasses={{
-                                separator: "px-2",
-                            }}
-                            separator="/"
-                        >
-                            <BreadcrumbItem>Admin</BreadcrumbItem>
-                            <BreadcrumbItem>Utilisateurs</BreadcrumbItem>
-                            <BreadcrumbItem>Gestion des Utilisateur</BreadcrumbItem>
-                            
-                        </Breadcrumbs>
-                        </div>
-                    </div>
-                    <GestionUtilisateur />
-                </div>
-
-            </main>
+            </Card>
         </div>
     )
 }
